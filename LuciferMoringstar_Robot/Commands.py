@@ -115,10 +115,10 @@ async def start(bot, message):
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [[
-                InlineKeyboardButton("Search Here", switch_inline_query_current_chat='')
+                InlineKeyboardButton("Search Here🔍", switch_inline_query_current_chat='')
                 ],[
-                InlineKeyboardButton("Help", callback_data="help"),
-                InlineKeyboardButton("About", callback_data="about")
+                InlineKeyboardButton("🔰 ϴᴜʀ Ꮯʜᴀᴍɴᴇʟ 🔰", url='https://t.me/STARZONE_MAIN'),
+                InlineKeyboardButton("Տᴍ Ᏼᴏᴛs", url='https://t.me/SM_BOTSZ')
                 ]]
             )
         )
