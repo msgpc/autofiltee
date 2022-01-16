@@ -117,7 +117,7 @@ async def start(bot, message):
                 [[
                 InlineKeyboardButton("Search Here🔍", switch_inline_query_current_chat='')
                 ],[
-                InlineKeyboardButton("🔰 ϴᴜʀ Ꮯʜᴀᴍɴᴇʟ 🔰", url='https://t.me/STARZONE_MAIN'),
+                InlineKeyboardButton("🔰 ϴᴜʀ Ꮯʜᴀɴɴᴇʟ🔰", url='https://t.me/STARZONE_MAIN'),
                 InlineKeyboardButton("Տᴍ Ᏼᴏᴛs", url='https://t.me/SM_BOTSZ')
                 ]]
             )
