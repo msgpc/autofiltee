@@ -49,10 +49,10 @@ async def start(bot, message):
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("📢 Join Updates Channel 📢", url=invite_link.invite_link)
+                                InlineKeyboardButton("📢 Ꭻᴏɪɴ Ꮇʏ Ⴎᴘᴅᴀᴛᴇs Ꮯʜᴀɴɴᴇʟ 📢", url=invite_link.invite_link)
                             ],
                             [
-                                InlineKeyboardButton("🔄 Try Again", callback_data=f"checksub#{file_id}")
+                                InlineKeyboardButton("🔄 Ͳʀʏ Ꭺɢᴀɪɴ ", callback_data=f"checksub#{file_id}")
                             ]
                         ]
                     ),
