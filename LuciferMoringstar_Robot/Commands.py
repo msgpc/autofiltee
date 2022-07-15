@@ -49,10 +49,10 @@ async def start(bot, message):
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("📢 Ꭻᴏɪɴ Ꮇʏ Ⴎᴘᴅᴀᴛᴇs Ꮯʜᴀɴɴᴇʟ 📢", url=invite_link.invite_link)
+                                InlineKeyboardButton("📢 Join Updates Channel 📢", url=invite_link.invite_link)
                             ],
                             [
-                                InlineKeyboardButton("🔄 Ͳʀʏ Ꭺɢᴀɪɴ ", callback_data=f"checksub#{file_id}")
+                                InlineKeyboardButton("", callback_data=f"checksub#{file_id}")
                             ]
                         ]
                     ),
@@ -84,7 +84,8 @@ async def start(bot, message):
                     f_caption = f"{files.file_name}"
                 buttons = [
                     [
-                        InlineKeyboardButton('♻️Ꭻᴏɪɴ Ⴎs♻️', url=f'{TUTORIAL}')
+                        InlineKeyboardButton('Search again', switch_inline_query_current_chat=''),
+                        InlineKeyboardButton('Discussion', url='https://t.me/MSPdiscussion')
                     ]
                     ]
                 await bot.send_cached_media(
@@ -114,15 +115,18 @@ async def start(bot, message):
             parse_mode="Markdown",
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[
-                InlineKeyboardButton("Search Here🔍", switch_inline_query_current_chat='')
-                ],[
-                InlineKeyboardButton("🔰 ϴᴜʀ Ꮯʜᴀɴɴᴇʟ🔰", url='https://t.me/STARZONE_MAIN'),
-                InlineKeyboardButton("Տᴍ Ᏼᴏᴛs", url='https://t.me/SM_BOTSZ')
-                ]]
+                [
+                    [
+                        InlineKeyboardButton("Search Here", switch_inline_query_current_chat=''),
+                        InlineKeyboardButton('Discussion', url='https://t.me/MSPdiscussion')
+                    ],
+                    [
+                        InlineKeyboardButton("About", callback_data="about")
+                    ]
+                ]
             )
         )
-        StopPropagation
+        
 
 @Client.on_message(filters.command('channel') & filters.user(ADMINS))
 async def channel_info(bot, message):
@@ -330,8 +334,9 @@ async def delete(bot, message):
 async def bot_info(bot, message):
     buttons = [
         [
-            
-            InlineKeyboardButton('Deploy Video', url=f'{TUTORIAL}')
+            InlineKeyboardButton('Update Channel', url='https://t.me/MSPmoviesOffl'),
+            InlineKeyboardButton('Source Code', url='https://t.me/MSPbots')
         ]
         ]
-    await message.reply(text=f"{ABOUT}", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
+    await message.reply(text="<b>Developer : <a href='https://t.me/BaashaBaii'>Baasha Baii</a>\nLanguage : <code>Python3</code>\nLibrary : <a href='https://docs.pyrogram.org/'>Pyrogram asyncio</a>\nSource Code : <a href='https://t.me/MSPbots'>Click here</a>\nHelp Group : <a href='https://t.me/MSPdiscussion'>MSP Bots</a> </b>", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
+    
