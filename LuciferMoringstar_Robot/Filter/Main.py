@@ -274,21 +274,14 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     reply_markup=InlineKeyboardMarkup(buttons)
                 )
                 return
-        elif query.data == "help":
-            buttons = [
-                [
-                    InlineKeyboardButton('Making Video', url=f'{TUTORIAL}')
-                ]
-                ]
-            await query.message.edit(text=f"{HELP}", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
-
         elif query.data == "about":
             buttons = [
                 [
-                    InlineKeyboardButton('Making Video', url=f'{TUTORIAL}')
+                    InlineKeyboardButton('Update Channel', url='https://t.me/MSPmoviesOffl'),
+                    InlineKeyboardButton('Source Code', url='https://t.me/MSPbots')
                 ]
                 ]
-            await query.message.edit(text=f"{ABOUT}", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
+            await query.message.edit(text="<b>Developer : <a href='https://t.me/BaashaBaii'>Baasha Baii</a>\nLanguage : <code>Python3</code>\nLibrary : <a href='https://docs.pyrogram.org/'>Pyrogram asyncio</a>\nSource Code : <a href='https://t.me/MSPbots'>Click here</a>\nHelp Group : <a href='https://t.me/MSPdiscussion'>MSP Bots</a> </b>", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
 
 
         elif query.data.startswith("pr0fess0r_99"):
@@ -308,7 +301,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     f_caption = f"{files.file_name}"
                 buttons = [
                     [
-                        InlineKeyboardButton('🖥️ How To Own 🖥️', url=f'{TUTORIAL}')
+                        InlineKeyboardButton('Discussion', url='https://t.me/MSPdiscussion'),
+                        InlineKeyboardButton('Update Channel', url='https://t.me/MSPmoviesOffl')
                     ]
                     ]
                 
@@ -339,7 +333,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     f_caption = f"{title}"
                 buttons = [
                     [
-                        InlineKeyboardButton('🖥️ How To Own 🖥️', url=f'{TUTORIAL}')
+                         InlineKeyboardButton('Discussion', url='https://t.me/MSPdiscussion'),
+                        InlineKeyboardButton('Update Channel', url='https://t.me/MSPmoviesOffl')
                     ]
                     ]
                 
@@ -355,4 +350,4 @@ async def cb_handler(client: Client, query: CallbackQuery):
         elif query.data == "pages":
             await query.answer()
     else:
-        await query.answer("കൌതുകും ലേശം കൂടുതൽ ആണല്ലേ👀",show_alert=True)
+        await query.answer("More Fun👀, Get Lost",show_alert=True)
